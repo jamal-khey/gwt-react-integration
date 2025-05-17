@@ -2,3 +2,8 @@ gwt-app/target/*
 gwt-app/war/*
 gwt-app/gwt-unitCache/*
 gwt-app/.idea/*
+gwt-app/*.iml
+
+# React app
+gwt-app/src/main/webapp/react-app/node_modules
+gwt-app/src/main/webapp/react-app/dist
