@@ -1,0 +1,4 @@
+gwt-app/target/*
+gwt-app/war/*
+gwt-app/gwt-unitCache/*
+gwt-app/.idea/*
