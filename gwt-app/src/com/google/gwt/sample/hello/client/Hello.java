@@ -64,7 +64,7 @@ public class Hello implements EntryPoint {
     mainPanel.add(separator2);
     
     // Load React script and add React component
-    Label loadingLabel = new Label("Loading React components...");
+    final Label loadingLabel = new Label("Loading React components...");
     mainPanel.add(loadingLabel);
     
     ReactWrapper.loadReactScript(new Callback<Void, Exception>() {

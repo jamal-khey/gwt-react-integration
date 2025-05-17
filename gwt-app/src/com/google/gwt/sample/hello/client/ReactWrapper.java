@@ -6,6 +6,8 @@ import com.google.gwt.user.client.ui.Widget;
 import com.google.gwt.user.client.ui.HTMLPanel;
 import com.google.gwt.core.client.ScriptInjector;
 import com.google.gwt.core.client.Callback;
+import com.google.gwt.event.logical.shared.AttachEvent;
+import com.google.gwt.event.logical.shared.AttachEvent.Handler;
 
 /**
  * A wrapper for React components to be used in GWT.
@@ -45,14 +47,16 @@ public class ReactWrapper {
      * @param message Optional message to pass to the React component
      * @return A GWT widget containing the React component
      */
-    public static Widget createReactWidget(String containerId, String message) {
+    public static Widget createReactWidget(final String containerId, final String message) {
         // Create a container for the React component
         HTMLPanel container = new HTMLPanel("<div id='" + containerId + "'></div>");
         
         // After the widget is attached to the DOM, render the React component
-        container.addAttachHandler(event -> {
-            if (event.isAttached()) {
-                renderReactComponent(containerId, message);
+        container.addAttachHandler(new Handler() {
+            public void onAttachOrDetach(AttachEvent event) {
+                if (event.isAttached()) {
+                    renderReactComponent(containerId, message);
+                }
             }
         });
         
