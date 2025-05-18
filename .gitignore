@@ -7,3 +7,5 @@ gwt-app/*.iml
 # React app
 gwt-app/src/main/webapp/react-app/node_modules
 gwt-app/src/main/webapp/react-app/dist
+gwt-app/war/react-app/dist/*
+gwt-app/war/react-app/dist/bundle.js
