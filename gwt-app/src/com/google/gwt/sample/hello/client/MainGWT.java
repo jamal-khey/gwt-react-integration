@@ -30,7 +30,7 @@ import com.google.gwt.user.client.ui.HTML;
 /**
  * HelloWorld application with React integration.
  */
-public class Hello implements EntryPoint {
+public class MainGWT implements EntryPoint {
 
   public void onModuleLoad() {
     // Create a panel to organize our widgets

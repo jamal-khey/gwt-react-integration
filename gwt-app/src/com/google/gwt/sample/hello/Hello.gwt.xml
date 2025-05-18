@@ -14,5 +14,5 @@
 
 <module rename-to="hello">
 	<inherits name="com.google.gwt.user.User"/>
-	<entry-point class="com.google.gwt.sample.hello.client.Hello"/>
+	<entry-point class="com.google.gwt.sample.hello.client.MainGWT"/>
 </module>
